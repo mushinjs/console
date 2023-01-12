@@ -1,0 +1,19 @@
+<template>
+  <div>
+    <h1>这里是列表页</h1>
+    <ul class="list flex">
+      <li>
+        <h1>标题1</h1>
+        <p>text1</p>
+      </li>
+      <li>
+        <h1>标题2</h1>
+        <p>text2</p>
+      </li>
+      <li>
+        <h1>标题3</h1>
+        <p>text3</p>
+      </li>
+    </ul>
+  </div>
+</template>
