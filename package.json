@@ -1,34 +1,15 @@
 {
-  "name": "@mushinjs/console",
-  "version": "0.0.1",
+  "name": "console-repo",
+  "private": true,
   "license": "AGPL-3.0",
-  "authore": "Setobox <setoboxes@gmail.com>",
-  "files": [
-    ".output/public",
-    ".output/server"
-  ],
+  "author": "Setobox <setoboxes@gmail.com>",
   "scripts": {
-    "build": "nuxt build",
-    "dev": "nuxt dev",
-    "generate": "nuxt generate",
-    "preview": "nuxt preview",
-    "postinstall": "nuxt prepare",
-    "lint": "eslint app --ext .js,.jsx,.ts,.tsx,.vue --ignore-path .gitignore"
+    "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs,.ts,.tsx,.cts,.mts --fix --ignore-path .gitignore"
   },
   "devDependencies": {
-    "@iconify-json/mdi": "^1.1.41",
-    "@nuxt/test-utils": "^3.0.0",
-    "@unocss/nuxt": "^0.48.3",
-    "@unocss/preset-icons": "^0.48.3",
-    "nuxt": "3.0.0",
-    "sass": "^1.57.1",
-    "vite": "^4.0.4",
-    "vitest": "^0.27.1",
-    "webpack": "^5.75.0"
-  },
-  "dependencies": {
-    "@vueuse/core": "^9.11.1",
-    "@vueuse/nuxt": "^9.11.1",
-    "vue": "^3.2.45"
+    "@types/node": "^18.11.18",
+    "eslint": "^8.33.0",
+    "typescript": "~4.9.4",
+    "vitest": "^0.28.3"
   }
 }
