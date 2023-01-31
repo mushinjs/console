@@ -1,15 +1,28 @@
 {
   "name": "console-repo",
   "private": true,
-  "license": "AGPL-3.0",
   "author": "Setobox <setoboxes@gmail.com>",
+  "license": "AGPL-3.0",
   "scripts": {
-    "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs,.ts,.tsx,.cts,.mts --fix --ignore-path .gitignore"
+    "start": "node -r esbuild-register server/prod.ts",
+    "dev": "node -r esbuild-register server/dev.ts",
+    "build": "pnpm -r build",
+    "lint": "eslint --cache . --ignore-path .gitignore",
+    "lint:fix": "pnpm lint --fix"
   },
   "devDependencies": {
+    "@antfu/eslint-config": "^0.35.1",
+    "@koa/router": "^12.0.0",
+    "@types/koa": "^2.13.5",
+    "@types/koa__router": "^12.0.0",
     "@types/node": "^18.11.18",
+    "esbuild": "^0.17.5",
+    "esbuild-register": "^3.4.2",
     "eslint": "^8.33.0",
-    "typescript": "~4.9.4",
+    "koa": "^2.14.1",
+    "koa-connect": "^2.1.0",
+    "koa-send": "^5.0.1",
+    "typescript": "^4.9.4",
     "vitest": "^0.28.3"
   }
 }

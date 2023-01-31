@@ -1,0 +1,12 @@
+{
+  "extends": "./tsconfig.base",
+  "compilerOptions": {
+    "baseUrl": ".",
+    "resolveJsonModule": true,
+    "paths": {
+      "@mushinjs/plugin-*": ["packages/*/src"],
+      "@mushinjs/*": ["packages/*"]
+    }
+  },
+  "include": ["packages/console/dist/client/ssr-manifest.json"]
+}
