@@ -1,13 +1,17 @@
-import { createSSRApp } from 'vue'
+import { createApp } from 'vue'
+import { createRouter, createWebHistory } from 'vue-router'
+import routes from 'virtual:generated-pages'
 import App from './App.vue'
-import { createRouter } from './router'
 
+import '@unocss/reset/tailwind.css'
 import './assets/main.css'
+import 'uno.css'
 
-// 为了保证数据的互不干扰，每次请求需要导出一个新的实例
-export const createApp = () => {
-  const app = createSSRApp(App)
-  const router = createRouter()
-  app.use(router)
-  return { app, router }
-}
+const app = createApp(App)
+const router = createRouter({
+  history: createWebHistory(),
+  routes,
+})
+
+app.use(router)
+app.mount('#app')
