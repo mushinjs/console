@@ -27,7 +27,6 @@
     "@types/node": "^18.11.12",
     "@types/nprogress": "^0.2.0",
     "@vitejs/plugin-vue": "^4.0.0",
-    "@vitejs/plugin-vue-jsx": "^3.0.0",
     "@vue-macros/volar": "^0.8.1",
     "@vue/compiler-dom": "^3.2.45",
     "@vue/test-utils": "^2.2.8",

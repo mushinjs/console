@@ -3,7 +3,6 @@
 import { resolve } from 'path'
 import { defineConfig } from 'vite'
 import Vue from '@vitejs/plugin-vue'
-// import VueJsx from '@vitejs/plugin-vue-jsx'
 import Pages from 'vite-plugin-pages'
 import AutoImport from 'unplugin-auto-import/vite'
 import Components from 'unplugin-vue-components/vite'
@@ -20,8 +19,6 @@ export default defineConfig({
     },
   },
   plugins: [
-    // Vue(),
-    // VueJsx(),
     VueMacros({
       plugins: {
         vue: Vue({
@@ -29,7 +26,19 @@ export default defineConfig({
         }),
       },
     }),
-    Pages(),
+    Pages({
+      routeBlockLang: 'yaml',
+      extendRoute(route) {
+        if (route.path === '/')
+          return route
+        return {
+          ...route,
+          meta: {
+            nav: true,
+          },
+        }
+      },
+    }),
     AutoImport({
       imports: [
         'vue',
